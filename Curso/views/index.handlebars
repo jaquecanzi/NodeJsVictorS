@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem Vindo ao meu Portfólio!</h1>
+  <p class="lead">Primeiro site feito com Node.js</p>
+  <hr class="my-4">
+  <p></p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Criar uma conta</a>
+</div>
+<hr>
+<h2>Postagens Recentes</h2>
+<br>
+{{#each postagens}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <hr>
+        <small>Categoria: {{categoria.nome}}</small><br>
+        <small>Data de publicação: {{data}}</small><br>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success mt-2">Leia mais</button></a>
+        
+    </div>
+</div>
+{{else}}
+<h5>Nenhuma Postagem Listada</h5>
+{{/each}}
